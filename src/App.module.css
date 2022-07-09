@@ -18,3 +18,9 @@
     margin: 0;
     line-height: 1.2;
 }
+
+@media (max-width:992px) {
+    .header{
+        width: 80%;
+    }
+}
