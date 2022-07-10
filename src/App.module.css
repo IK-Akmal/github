@@ -19,8 +19,18 @@
     line-height: 1.2;
 }
 
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
 @media (max-width:992px) {
-    .header{
+    .header {
         width: 80%;
     }
 }

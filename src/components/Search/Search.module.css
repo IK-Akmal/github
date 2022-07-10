@@ -26,3 +26,10 @@
     height: 24px;
     font-size: 18px;
 }
+
+.btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
