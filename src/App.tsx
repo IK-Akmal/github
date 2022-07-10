@@ -37,7 +37,7 @@ function App() {
             : (
               <>
                 {
-                  data?.items
+                  data?.items.length
                     ? <CardList errorMessage={error} items={data?.items} />
                     : <div className={styles.listEmpty}>Список пуст</div>
                 }
