@@ -40,6 +40,37 @@
 
 @media (max-width:992px) {
     .header {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .title {
+        color: #484949;
+        font-weight: 300;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .listEmpty {
+        width: 60%;
+    }
+}
+
+
+@media (max-width:576px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .listEmpty {
         width: 80%;
     }
 }

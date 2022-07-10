@@ -1,14 +1,18 @@
 .card {
     display: grid;
     grid-template-columns: 1fr 2fr 4fr 5fr 4fr;
+    align-items: center;
     gap: 10px;
     height: 76px;
-    align-items: center;
     background: #fff;
     border: 1px solid transparent;
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
     border-radius: 5px;
     padding: 10px 20px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 60%;
 }
 
 .avatar {
@@ -19,14 +23,12 @@
 
 .login {
     text-overflow: ellipsis;
-    width: 100px;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .link {
     text-overflow: ellipsis;
-    width: 200px;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -34,15 +36,38 @@
 
 .description {
     text-overflow: ellipsis;
-    width: 250px;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .language {
     text-overflow: ellipsis;
-    width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
+}
+
+
+
+@media (max-width:992px) {
+    .card {
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width:576px) {
+    .card {
+        width: 90%;
+        padding: 0 10px;
+    }
+}
+
+
+
+@media (max-width:400px) {
+    .card {
+        width: 100%;
+    }
 }
