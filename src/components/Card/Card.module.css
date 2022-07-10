@@ -59,15 +59,41 @@
 
 @media (max-width:576px) {
     .card {
-        width: 90%;
-        padding: 0 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 100px);
+        width: 80%;
+        height: auto;
+        padding: 10px 10px 30px 10px;
     }
-}
 
+    .avatar {
+        justify-self: center;
+        width: 80px;
+        height: 80px;
+    }
 
+    .login::before {
+        content: "User name: ";
+        font-weight: 600;
+    }
 
-@media (max-width:400px) {
-    .card {
-        width: 95%;
+    .link::before {
+        content: "Link to repository : ";
+        font-weight: 600;
+    }
+
+    .description::before {
+        content: "description: ";
+        font-weight: 600;
+    }
+
+    .language {
+        text-align: left;
+    }
+
+    .language::before {
+        content: "language: ";
+        font-weight: 600;
+
     }
 }
