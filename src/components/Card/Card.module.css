@@ -60,7 +60,7 @@
 @media (max-width:576px) {
     .card {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fit, 100px);
+        grid-template-rows: repeat(auto-fit, minmax(0, 100px));
         width: 80%;
         height: auto;
         padding: 10px 10px 30px 10px;
