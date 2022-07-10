@@ -3,8 +3,8 @@ import axios from 'axios';
 import Search from './components/Search/Search';
 import styles from './App.module.css';
 import { Repository } from './Model/Repository';
-import Card from './components/Card/Card';
 import Spinner from './components/Spinner/Spinner';
+import CardList from './components/CardList/CardList';
 
 function App() {
   const [value, setValue] = useState<string>('');
@@ -19,7 +19,7 @@ function App() {
       setError('');
       axios.get(`https://api.github.com/search/repositories?q=${value}`)
         .then((response) => setData(response.data))
-        .catch((err: Error) => setError(`Error: ${err.message}`))
+        .catch((err: Error) => setError(err.message))
         .finally(() => setLoading(false));
     }
   };
@@ -34,11 +34,8 @@ function App() {
         {
           loading
             ? <Spinner />
-            : error || data?.items.map((item) => (
-              <Card key={item.id} {...item} />
-            ))
+            : <CardList errorMessage={error} items={data?.items} />
         }
-
       </main>
     </div>
   );
