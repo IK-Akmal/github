@@ -29,6 +29,15 @@
     margin-top: 50px;
 }
 
+.listEmpty {
+    background-color: aliceblue;
+    border: 1px solid #91d5ff;
+    padding: 10px 30px;
+    text-align: center;
+    width: 40%;
+}
+
+
 @media (max-width:992px) {
     .header {
         width: 80%;

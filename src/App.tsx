@@ -34,7 +34,15 @@ function App() {
         {
           loading
             ? <Spinner />
-            : <CardList errorMessage={error} items={data?.items} />
+            : (
+              <>
+                {
+                  data?.items
+                    ? <CardList errorMessage={error} items={data?.items} />
+                    : <div className={styles.listEmpty}>Список пусть</div>
+                }
+              </>
+            )
         }
       </main>
     </div>
