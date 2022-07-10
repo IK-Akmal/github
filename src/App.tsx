@@ -39,7 +39,7 @@ function App() {
                 {
                   data?.items
                     ? <CardList errorMessage={error} items={data?.items} />
-                    : <div className={styles.listEmpty}>Список пусть</div>
+                    : <div className={styles.listEmpty}>Список пуст</div>
                 }
               </>
             )
