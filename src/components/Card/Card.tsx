@@ -1,4 +1,4 @@
-import { Item } from '../../Model/Repository';
+import { Item } from '../../Model/Item';
 import styles from './Card.module.css';
 
 function Card({

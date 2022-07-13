@@ -1,4 +1,4 @@
-import { Item } from '../../Model/Repository';
+import { Item } from '../../Model/Item';
 import Card from '../Card/Card';
 import ErrorAlert from '../ErrorAlert/ErrorAlert';
 
