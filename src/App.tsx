@@ -31,19 +31,13 @@ function App() {
         <Search value={value} setValue={setValue} onSubmit={getRepositories} />
       </header>
       <main className={styles.main}>
-        {
-          loading
-            ? <Spinner />
-            : (
-              <>
-                {
-                  data?.items.length
-                    ? <CardList errorMessage={error} items={data?.items} />
-                    : <div className={styles.listEmpty}>Список пуст</div>
-                }
-              </>
-            )
-        }
+        <Spinner loading={loading}>
+          {
+                data?.items.length
+                  ? <CardList errorMessage={error} items={data?.items} />
+                  : <div className={styles.listEmpty}>Список пуст</div>
+          }
+        </Spinner>
       </main>
     </div>
   );

@@ -1,8 +1,16 @@
 import styles from './Spinner.module.css';
+import { SpinnerProps } from './Spinner.props';
 
-function Spinner() {
+function Spinner({ children, loading }: SpinnerProps): JSX.Element {
+  if (loading) {
+    return (
+      <div className={styles.loader} />
+    );
+  }
   return (
-    <div className={styles.loader} />
+    <>
+      {children}
+    </>
   );
 }
 
